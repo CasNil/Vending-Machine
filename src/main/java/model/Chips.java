@@ -14,11 +14,11 @@ public class Chips extends Product {
 
     @Override
     public String examine() {
-        return "Id: " + getId() + ", " + "Product Name: " + getProductName() + ", " + "Price: " + getPrice() + ", " + "Type: " + this.flavour  + ", " + "Contains Sugar: " + isPotatoChips;
+        return "Id: " + getId() + ", " + "Product Name: " + getProductName() + ", " + "Price: " + getPrice() + ", " + "Flavour: " + this.flavour  + ", " + "Is potato chips: " + isPotatoChips;
     }
 
     @Override
     public String use() {
-        return "Product Name: " + getProductName() + ", " + "Type: " + this.flavour;
+        return "Product Name: " + getProductName() + ", " + "Flavour: " + this.flavour;
     }
 }

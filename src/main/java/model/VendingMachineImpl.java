@@ -5,9 +5,8 @@ import java.util.List;
 
 public class VendingMachineImpl implements VendingMachine {
 
-    private Product[] products;
-
-    private int depositPool;
+    private final Product[] products;
+    public int depositPool;
 
     public VendingMachineImpl(Product[] products) {
         this.products = products;
@@ -17,7 +16,12 @@ public class VendingMachineImpl implements VendingMachine {
 
     @Override
     public void addCurrency(double amount) {
-
+        int amountToAdd = (int) Math.round(amount);
+        if (ACCEPTED_AMOUNT.contains(amountToAdd)) {
+            depositPool += amountToAdd;
+        } else {
+            throw new IllegalArgumentException("Amount allowed is: 1, 2, 5, 10, 20, 50, 100, 200, 500, 1000");
+        }
     }
 
     @Override

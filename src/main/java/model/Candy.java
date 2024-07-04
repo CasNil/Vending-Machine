@@ -14,7 +14,7 @@ public class Candy extends Product {
 
     @Override
     public String examine() {
-        return "Id: " + getId() + ", " + "Product Name: " + getProductName() + ", " + "Price: " + getPrice() + ", " + "Type: " + this.type + ", " + "Contains Sugar: " + isSoftCandy;
+        return "Id: " + getId() + ", " + "Product Name: " + getProductName() + ", " + "Price: " + getPrice() + ", " + "Type: " + this.type + ", " + "Is soft candy: " + isSoftCandy;
     }
 
     @Override
